@@ -16,10 +16,13 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="rLd-jM-FiC" kind="relationship" relationship="rootViewController" id="p7Y-PW-0eb"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf2-6W-GID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1454" y="115"/>
+            <point key="canvasLocation" x="-1471" y="115"/>
         </scene>
         <!--Poke Dex Table View Controller-->
         <scene sceneID="d7S-kx-0Fc">
@@ -76,6 +79,7 @@
                                     <outlet property="pokemonIDLabel" destination="O0C-sn-kys" id="lmD-QE-jie"/>
                                     <outlet property="pokemonImageView" destination="NZX-Rf-pu6" id="cd7-kg-aF0"/>
                                     <outlet property="pokemonNameTextLabel" destination="qI1-Mi-Cgv" id="EgI-tr-OXt"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toPokemonVC" id="7pR-qJ-MpA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -84,6 +88,7 @@
                             <outlet property="delegate" destination="rLd-jM-FiC" id="zWV-qz-q69"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="hNI-t6-fDw"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jc8-yA-iBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,16 +103,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="2To-hv-sNb">
-                                <rect key="frame" x="8" y="132" width="398" height="260"/>
+                                <rect key="frame" x="8" y="176" width="398" height="260"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="260" id="8UT-Fs-HHa"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gjS-zX-eFI">
-                                <rect key="frame" x="87" y="198" width="240" height="128"/>
+                                <rect key="frame" x="87" y="242" width="240" height="128"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="t7g-Ix-0tY">
-                                <rect key="frame" x="8" y="422" width="398" height="432"/>
+                                <rect key="frame" x="8" y="466" width="398" height="388"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="moveCell" textLabel="oPM-Md-wka" style="IBUITableViewCellStyleDefault" id="0LX-44-cNe">
@@ -130,7 +135,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hjN-Al-dwP">
-                                <rect key="frame" x="49" y="74" width="316" height="37"/>
+                                <rect key="frame" x="49" y="118" width="316" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBN-ng-myE">
                                         <rect key="frame" x="0.0" y="8" width="17" height="21.5"/>
@@ -166,6 +171,7 @@
                             <constraint firstItem="ivP-z4-fsO" firstAttribute="bottom" secondItem="t7g-Ix-0tY" secondAttribute="bottom" constant="8" id="z6W-6V-wgn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="CjY-r7-Hrp"/>
                     <connections>
                         <outlet property="pokemonIDLabel" destination="OBN-ng-myE" id="cUM-Lh-Uzt"/>
                         <outlet property="pokemonMovesTableView" destination="t7g-Ix-0tY" id="E93-mx-o4v"/>
