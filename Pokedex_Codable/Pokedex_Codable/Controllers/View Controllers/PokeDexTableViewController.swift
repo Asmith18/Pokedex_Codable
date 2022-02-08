@@ -13,7 +13,8 @@ class PokeDexTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkingController.fetchPokedex { result in
+        
+        NetworkingController.fetchPokedex(with: NetworkingController.initialURL!) { result in
             switch result {
             case .success(let pokedex):
                 self.pokedexResults = pokedex.results

@@ -12,16 +12,20 @@ class NetworkingController {
     
     private static let baseURLString = "https://pokeapi.co"
     
-    static func fetchPokedex(completion: @escaping (Result<Pokedex, ResultError>) -> Void) {
-        
-        guard let baseURL = URL(string: baseURLString) else {return}
+    static var initialURL: URL? {
+        guard let baseURL = URL(string: baseURLString) else {return nil}
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         urlComponents?.path = "/api/v2/pokemon/"
         
-        guard let finalURL = urlComponents?.url else {return}
+        guard let finalURL = urlComponents?.url else {return nil}
         print(finalURL)
+        return finalURL
+    }
+    
+    static func fetchPokedex(with url: URL, completion: @escaping (Result<Pokedex, ResultError>) -> Void) {
         
-        URLSession.shared.dataTask(with: finalURL) { dTaskData, _, error in
+        
+        URLSession.shared.dataTask(with: url) { dTaskData, _, error in
             if let error = error {
                 completion(.failure(.thrownError(error)))
             }
