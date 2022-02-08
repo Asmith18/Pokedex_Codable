@@ -25,23 +25,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NZX-Rf-pu6">
-                                            <rect key="frame" x="24" y="34.5" width="40" height="40"/>
+                                            <rect key="frame" x="24" y="24.5" width="60" height="60"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="okH-hM-RZw"/>
+                                                <constraint firstAttribute="height" constant="60" id="okH-hM-RZw"/>
                                                 <constraint firstAttribute="width" secondItem="NZX-Rf-pu6" secondAttribute="height" multiplier="1:1" id="ppN-eb-UT2"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Tet-LZ-aho">
-                                            <rect key="frame" x="74" y="33" width="300" height="43"/>
+                                            <rect key="frame" x="94" y="33" width="280" height="43"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qI1-Mi-Cgv">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0C-sn-kys">
-                                                    <rect key="frame" x="0.0" y="22.5" width="300" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="22.5" width="280" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -59,6 +59,11 @@
                                     <constraint firstItem="Tet-LZ-aho" firstAttribute="centerY" secondItem="WR9-Qp-ugY" secondAttribute="centerY" id="b4t-i9-LLn"/>
                                     <constraint firstItem="NZX-Rf-pu6" firstAttribute="centerY" secondItem="WR9-Qp-ugY" secondAttribute="centerY" id="yqE-nw-qsd"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="pokemonIDLabel" destination="O0C-sn-kys" id="lmD-QE-jie"/>
+                                    <outlet property="pokemonImageView" destination="NZX-Rf-pu6" id="cd7-kg-aF0"/>
+                                    <outlet property="pokemonNameTextLabel" destination="qI1-Mi-Cgv" id="EgI-tr-OXt"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

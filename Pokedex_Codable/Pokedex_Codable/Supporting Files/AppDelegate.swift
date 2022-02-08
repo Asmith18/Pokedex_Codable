@@ -14,6 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        NetworkingController.fetchPokedex { result in
+//            switch result {
+//            case .success(let pokedex):
+//                print(pokedex)
+//            case .failure(let error):
+//                print("there was an error!", error.errorDescription!)
+//            }
+//        }
         return true
     }
 

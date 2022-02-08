@@ -35,6 +35,8 @@ class PokeDexTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        guard let cell = tableView.dequeueReusableCell(withIdentifier: "pokedexCell", for: indexPath) as? PokedexTableViewCell else { return UITableViewCell() }
 
+        let pokemon = pokedexResults[indexPath.row]
+        cell.updateViews(pokemonURLString: pokemon.url)
         
 
         return cell
