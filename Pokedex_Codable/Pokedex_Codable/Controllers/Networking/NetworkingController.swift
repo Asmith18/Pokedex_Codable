@@ -66,7 +66,7 @@ class NetworkingController {
         }.resume()
     }
     
-    
+//MARK: - TODO PLZZZZZ and thXXXXXXXXx
     static func fetchImage(for pokemon: String, completetion: @escaping (Result<UIImage, ResultError>) -> Void) {
         guard let imageURL = URL(string: pokemon) else {return}
         
